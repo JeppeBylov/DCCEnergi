@@ -1,4 +1,4 @@
-codeunit 70100 "ParkingAccountMgmtPTE"
+codeunit 70100 "ParkingAccountMgmtKP"
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post (Yes/No)", OnBeforeOnRun, '', false, false)]
     local procedure CheckParkingAccount(var PurchaseHeader: Record "Purchase Header")

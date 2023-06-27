@@ -1,4 +1,4 @@
-tableextension 70100 "GeneralLedgerSetupExt" extends "General Ledger Setup"
+tableextension 70100 "GeneralLedgerSetupKP" extends "General Ledger Setup"
 {
     fields
     {
