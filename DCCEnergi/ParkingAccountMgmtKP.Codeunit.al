@@ -11,13 +11,14 @@ codeunit 70100 "ParkingAccountMgmtKP"
             exit;
         GenLedgerSetup.SetLoadFields("Parking Account");
         GenLedgerSetup.GET();
-        If GenLedgerSetup."Parking Account" = '' then
-            EXIT;
+        if GenLedgerSetup."Parking Account" = '' then
+            exit;
 
         PurchLine.SetRange(PurchLine."Document No.", PurchaseHeader."No.");
         PurchLine.SetRange("Document Type", PurchaseHeader."Document Type");
-        PurchLine.SetRange("Type", 1);
-        If PurchLine.IsEmpty = false then
+        PurchLine.SetRange("Type", PurchLine.Type::"G/L Account");
+        PurchLine.SetRange("No.", GenLedgerSetup."Parking Account");
+        if PurchLine.IsEmpty = false then
             Error(ParkingAccountErr, GenLedgerSetup."Parking Account");
     end;
 }
