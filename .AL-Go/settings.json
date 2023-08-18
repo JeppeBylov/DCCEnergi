@@ -2,8 +2,5 @@
   "country": "dk",
   "appFolders": [],
   "testFolders": [],
-  "bcptTestFolders": [],
-  "installApps": [
-    "DCCEnergi\\Continia\\EM 11.1.0.270382.app"
-  ]
+  "bcptTestFolders": []
 }
