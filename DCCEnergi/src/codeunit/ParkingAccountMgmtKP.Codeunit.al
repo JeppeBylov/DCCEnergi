@@ -49,14 +49,14 @@ codeunit 70100 "ParkingAccountMgmtKP"
 
     local procedure IsParkingAccount(AccountNo: code[20]): Boolean
     var
-        GenLedgerSetupKP: Record "General Ledger Setup";
+        GeneralLedgerSetup: Record "General Ledger Setup";
     begin
-        GenLedgerSetupKP.SetLoadFields("Parking Account");
-        GenLedgerSetupKP.GET();
-        if GenLedgerSetupKP."Parking Account" = '' then
+        GeneralLedgerSetup.SetLoadFields("Parking Account");
+        GeneralLedgerSetup.GET();
+        if GeneralLedgerSetup."Parking Account" = '' then
             exit;
 
-        if AccountNo = GenLedgerSetupKP."Parking Account" then
+        if AccountNo = GeneralLedgerSetup."Parking Account" then
             exit(true);
     end;
 }
